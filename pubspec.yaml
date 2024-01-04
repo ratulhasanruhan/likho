@@ -1,0 +1,77 @@
+name: likho
+description: Task Management
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  get: ^4.6.6
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_svg: ^2.0.9
+  flutter_screenutil: ^5.9.0
+  intl: ^0.19.0
+
+  #
+  logger: ^2.0.2+1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^2.0.0
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+     - assets/
+     - assets/images/
+     - assets/fonts/
+     - assets/icons/
+
+
+
+  fonts:
+    - family: HindSiliguri
+      fonts:
+        - asset: assets/fonts/HindSiliguri-Regular.ttf
+        - asset: assets/fonts/HindSiliguri-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/HindSiliguri-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/HindSiliguri-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/HindSiliguri-Light.ttf
+          weight: 300
+
+    - family: Ador
+      fonts:
+        - asset: assets/fonts/Ador-Regular.ttf
+        - asset: assets/fonts/Ador-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Ador-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Ador-Light.ttf
+          weight: 400
+        - asset: assets/fonts/Ador-ExtraLight.ttf
+          weight: 300
