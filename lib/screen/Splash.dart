@@ -79,7 +79,7 @@ class Splash extends StatelessWidget {
             ),
             TextButton(
                 onPressed: (){
-                  Get.updateLocale(Locale('bn', 'BD'));
+                  Get.toNamed('/signup');
                 },
                 child: Text(
                   'signup'.tr,

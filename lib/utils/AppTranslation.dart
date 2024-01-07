@@ -10,6 +10,7 @@ abstract class AppTranslation {
 final Map<String, String> en = {
   'app_name': 'Likho',
   'headline' : 'Plan what you will do to be more organized for today, tomorrow and beyond',
+
   'login' : 'Login',
   'signup' : 'Sign Up',
   'create' : 'Create',
@@ -22,11 +23,24 @@ final Map<String, String> en = {
   'please_enter_a_valid_email' : 'Please enter a valid email',
   'please_enter_password' : 'Please enter your password',
   'dont_have_an_account' : 'Don\'t have an account?',
+  'please_enter_username' : 'Please enter your username',
+  'have_an_account' : 'Have an account?',
+
+  'hi' : 'Hi',
+  'lets_make_this_day_productive' : 'Let’s make this day productive',
+  'my_tasks' : 'My Tasks',
+  'completed' : 'Completed',
+  'task' : 'Task',
+  'canceled' : 'Canceled',
+  'pending' : 'Pending',
+  'on_going' : 'On Going',
+  'today_task' : 'Today Task',
 };
 
 final Map<String, String> bn = {
   'app_name': 'লিখো',
   'headline' : 'আজ, আগামী এবং অতীতের জন্য আরো সংগঠিত হওয়ার জন্য আপনি কি করবেন তা পরিকল্পনা করুন',
+
   'login' : 'লগইন',
   'signup' : 'সাইন আপ',
   'create' : 'তৈরি করুন',
@@ -39,4 +53,16 @@ final Map<String, String> bn = {
   'please_enter_a_valid_email' : 'দয়া করে একটি বৈধ ই-মেইল দিন',
   'please_enter_password' : 'দয়া করে আপনার পাসওয়ার্ড দিন',
   'dont_have_an_account' : 'অ্যাকাউন্ট নেই?',
+  'please_enter_username' : 'দয়া করে আপনার ইউজারনেম দিন',
+  'have_an_account' : 'অ্যাকাউন্ট আছে?',
+
+  'hi' : 'হাই',
+  'lets_make_this_day_productive' : 'আসুন আজকের দিনটি উপকারপরম্পর করি',
+  'my_tasks' : 'আমার কাজ',
+  'completed' : 'সম্পন্ন',
+  'task' : 'টাস্ক',
+  'canceled' : 'বাতিল',
+  'pending' : 'পেন্ডিং',
+  'on_going' : 'চলমান',
+  'today_task' : 'আজকের কাজ',
 };

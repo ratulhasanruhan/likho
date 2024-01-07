@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:likho/screen/emailTextField.dart';
-import 'package:likho/screen/passTextField.dart';
+import 'package:likho/widget/emailTextField.dart';
+import 'package:likho/widget/passTextField.dart';
 import 'package:likho/utils/colors.dart';
 import 'package:likho/utils/fontCheck.dart';
 import 'package:likho/widget/BigButton.dart';
@@ -24,12 +24,14 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
+      body: SingleChildScrollView(
         padding: EdgeInsets.all(20.r),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Spacer(flex: 2,),
+            SizedBox(
+              height: 70.h,
+            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 3),
               child: Text(
@@ -42,7 +44,9 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
-            Spacer(flex: 1,),
+            SizedBox(
+              height: 50.h,
+            ),
             emailTextField(
                 emailController: emailController,
                 name: '${'email'.tr} ${'or'.tr} ${'username'.tr}',
@@ -84,8 +88,7 @@ class _LoginState extends State<Login> {
               child: bigButton(
                   name: 'login'.tr,
                   onPressed: () {
-                    Get.updateLocale(Locale('en', 'US'));
-
+                    Get.offAllNamed('/dashboard');
                   },
               ),
             ),
@@ -185,11 +188,13 @@ class _LoginState extends State<Login> {
               ],
             ),
 
-            Spacer(flex: 2,),
+            SizedBox(
+              height: 60.h,
+            ),
             Center(
               child: TextButton(
                 onPressed: (){
-
+                  Get.toNamed('/signup');
                 },
                 child: RichText(
                     textAlign: TextAlign.center,
