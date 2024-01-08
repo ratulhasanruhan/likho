@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 abstract class AppTranslation {
   static Map<String, Map<String, String>> translationsKeys  = {
     'en': en,
@@ -11,6 +9,7 @@ final Map<String, String> en = {
   'app_name': 'Likho',
   'headline' : 'Plan what you will do to be more organized for today, tomorrow and beyond',
 
+  //auth
   'login' : 'Login',
   'signup' : 'Sign Up',
   'create' : 'Create',
@@ -26,6 +25,7 @@ final Map<String, String> en = {
   'please_enter_username' : 'Please enter your username',
   'have_an_account' : 'Have an account?',
 
+  //dashboard
   'hi' : 'Hi',
   'lets_make_this_day_productive' : 'Let’s make this day productive',
   'my_tasks' : 'My Tasks',
@@ -35,12 +35,22 @@ final Map<String, String> en = {
   'pending' : 'Pending',
   'on_going' : 'On Going',
   'today_task' : 'Today Task',
+  'view_all' : 'View All',
+
+  //tag
+  'office' : 'Office',
+  'home' : 'Home',
+  'personal' : 'Personal',
+  'urgent' : 'Urgent',
+  'work' : 'Work',
+  'other' : 'Other',
 };
 
 final Map<String, String> bn = {
   'app_name': 'লিখো',
   'headline' : 'আজ, আগামী এবং অতীতের জন্য আরো সংগঠিত হওয়ার জন্য আপনি কি করবেন তা পরিকল্পনা করুন',
 
+  //auth
   'login' : 'লগইন',
   'signup' : 'সাইন আপ',
   'create' : 'তৈরি করুন',
@@ -56,6 +66,7 @@ final Map<String, String> bn = {
   'please_enter_username' : 'দয়া করে আপনার ইউজারনেম দিন',
   'have_an_account' : 'অ্যাকাউন্ট আছে?',
 
+  //dashboard
   'hi' : 'হাই',
   'lets_make_this_day_productive' : 'আসুন আজকের দিনটি উপকারপরম্পর করি',
   'my_tasks' : 'আমার কাজ',
@@ -65,4 +76,14 @@ final Map<String, String> bn = {
   'pending' : 'পেন্ডিং',
   'on_going' : 'চলমান',
   'today_task' : 'আজকের কাজ',
+  'view_all' : 'সব দেখুন',
+
+  //tag
+  'office' : 'অফিস',
+  'home' : 'বাড়ি',
+  'personal' : 'ব্যক্তিগত',
+  'urgent' : 'জরুরী',
+  'work' : 'কাজ',
+  'other' : 'অন্যান্য',
+
 };

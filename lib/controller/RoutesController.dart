@@ -4,6 +4,7 @@ import 'package:likho/screen/Dashboard.dart';
 import 'package:likho/screen/Login.dart';
 import 'package:likho/screen/Signup.dart';
 import 'package:likho/screen/Splash.dart';
+import 'package:likho/screen/Tasks.dart';
 
 appRoutes() => [
   GetPage(
@@ -29,9 +30,16 @@ appRoutes() => [
     middlewares: [MyMiddelware()],
     transition: Transition.cupertino,
   ),
+
   GetPage(
     name: '/dashboard',
     page: () => Dashboard(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+  ),
+  GetPage(
+    name: '/tasks',
+    page: () => Tasks(),
     middlewares: [MyMiddelware()],
     transition: Transition.cupertino,
   ),

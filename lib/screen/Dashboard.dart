@@ -1,9 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:likho/utils/NumberIntl.dart';
 import 'package:likho/utils/colors.dart';
+import 'package:likho/widget/TaskCard.dart';
+import '../utils/TaskStatus.dart';
+import '../utils/TaskTag.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -18,6 +21,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
+        primary: true,
         padding: EdgeInsets.all(16.r),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -177,7 +181,7 @@ class _DashboardState extends State<Dashboard> {
                                       height: 6.h,
                                     ),
                                     Text(
-                                      '86 ' + 'task'.tr,
+                                      '${digits(86)} ${'task'.tr}',
                                       style: TextStyle(
                                         color: Color(0xFF11165D),
                                         fontSize: 14,
@@ -258,7 +262,7 @@ class _DashboardState extends State<Dashboard> {
                                       height: 6.h,
                                     ),
                                     Text(
-                                      '13 ' + 'task'.tr,
+                                      '${digits(13)} ${'task'.tr}',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 14,
@@ -345,8 +349,8 @@ class _DashboardState extends State<Dashboard> {
                                       height: 6.h,
                                     ),
                                     Text(
-                                      '22 ' + 'task'.tr,
-                                      style: TextStyle(
+                                      '${digits(22)} ${'task'.tr}',
+                                      style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 14,
                                         fontWeight: FontWeight.w400,
@@ -427,7 +431,7 @@ class _DashboardState extends State<Dashboard> {
                                       height: 6.h,
                                     ),
                                     Text(
-                                      '56 ' + 'task'.tr,
+                                      '${digits('0')} ${'task'.tr}',
                                       style: TextStyle(
                                         color: Color(0xFF11165D),
                                         fontSize: 14,
@@ -464,7 +468,7 @@ class _DashboardState extends State<Dashboard> {
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    'View all',
+                    'view_all'.tr,
                     style: TextStyle(
                       color: Color(0xFF393F93),
                       fontSize: 12,
@@ -477,243 +481,22 @@ class _DashboardState extends State<Dashboard> {
             SizedBox(
               height: 12.h,
             ),
-
-            Container(
-              padding: EdgeInsets.all(15.r),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.r),
-                color: Color(0xFFF9FAFD),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      IntrinsicHeight(
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.symmetric(vertical: 4.h),
-                              child: VerticalDivider(
-                                color: Color(0xFF8F99EB),
-                                width: 2,
-                                thickness: 2,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.72,
-                                  child: Text(
-                                    'Cleaning Clothes and wrap.',
-                                    style: TextStyle(
-                                      color: Color(0xFF2C406E),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  '07:00 - 07:15',
-                                  style: TextStyle(
-                                    color: Color(0xFF99A7C6),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    height: 0,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      Material(
-                        child: InkWell(
-                          onTap: () {},
-                          borderRadius: BorderRadius.circular(14.r),
-                          child: Padding(
-                            padding: EdgeInsets.all(4.r),
-                            child: Icon(
-                              Icons.more_vert_rounded,
-                              color: textColor,
-                              size: 16.r,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 3.h),
-                        decoration: BoxDecoration(
-                          color: Color(0xFF8F99EB).withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(3.r),
-                        ),
-                        child: Text(
-                          'Urgent',
-                          style: TextStyle(
-                            color: Color(0xFF8F99EB),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 6.w,
-                      ),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 3.h),
-                        decoration: BoxDecoration(
-                          color: Color(0xFF8F99EB).withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(3.r),
-                        ),
-                        child: Text(
-                          'Home',
-                          style: TextStyle(
-                            color: Color(0xFF8F99EB),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
+            TaskCard(
+              tags: [
+                TaskTag.office,
+                TaskTag.home,
+                TaskTag.urgent
+              ],
+              title: 'Design Meeting',
+              time: '10:00 - 11:00',
+              status: TaskStatus.canceled,
+              inHome: true,
+              onFunction: () {
+                print('clicked tasked');
+              },
             ),
             SizedBox(
-              height: 10.h,
-            ),
-            Container(
-              padding: EdgeInsets.all(15.r),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.r),
-                color: Color(0xFFF9FAFD),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      IntrinsicHeight(
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.symmetric(vertical: 4.h),
-                              child: VerticalDivider(
-                                color: Color(0xFFE88B8C),
-                                width: 2,
-                                thickness: 2,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.72,
-                                  child: Text(
-                                    'Cleaning Clothes',
-                                    style: TextStyle(
-                                      color: Color(0xFF2C406E),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  '07:00 - 07:15',
-                                  style: TextStyle(
-                                    color: Color(0xFF99A7C6),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    height: 0,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      Material(
-                        child: InkWell(
-                          onTap: () {},
-                          borderRadius: BorderRadius.circular(14.r),
-                          child: Padding(
-                            padding: EdgeInsets.all(4.r),
-                            child: Icon(
-                              Icons.more_vert_rounded,
-                              color: textColor,
-                              size: 16.r,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 3.h),
-                        decoration: BoxDecoration(
-                          color: Color(0xFF8F99EB).withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(3.r),
-                        ),
-                        child: Text(
-                          'Urgent',
-                          style: TextStyle(
-                            color: Color(0xFF8F99EB),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 6.w,
-                      ),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 3.h),
-                        decoration: BoxDecoration(
-                          color: Color(0xFF8F99EB).withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(3.r),
-                        ),
-                        child: Text(
-                          'Home',
-                          style: TextStyle(
-                            color: Color(0xFF8F99EB),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
+              height: 100.h,
             ),
           ],
         ),

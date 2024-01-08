@@ -61,7 +61,7 @@ class _SignUpState extends State<SignUp> {
                 prefixIcon: Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: SvgPicture.asset(
-                    'assets/icons/message.svg',
+                    'assets/icons/person.svg',
                   ),
                 ),
                 prefixIconConstraints: BoxConstraints(
