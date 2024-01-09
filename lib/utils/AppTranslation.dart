@@ -44,6 +44,10 @@ final Map<String, String> en = {
   'urgent' : 'Urgent',
   'work' : 'Work',
   'other' : 'Other',
+
+  //task
+  'search_for_task' : 'Search for task',
+
 };
 
 final Map<String, String> bn = {
@@ -85,5 +89,8 @@ final Map<String, String> bn = {
   'urgent' : 'জরুরী',
   'work' : 'কাজ',
   'other' : 'অন্যান্য',
+
+  //task
+  'search_for_task' : 'টাস্ক খুজুন',
 
 };

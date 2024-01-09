@@ -38,7 +38,7 @@ class _DashboardState extends State<Dashboard> {
                   children: [
                     Text(
                       '${'hi'.tr}, Steven',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color(0xFF11165D),
                         fontSize: 28,
                         fontWeight: FontWeight.w600,
@@ -46,7 +46,7 @@ class _DashboardState extends State<Dashboard> {
                     ),
                     Text(
                       'lets_make_this_day_productive'.tr,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color(0xFF575757),
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -57,7 +57,7 @@ class _DashboardState extends State<Dashboard> {
                 Padding(
                   padding: const EdgeInsets.all(4),
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       boxShadow: [
                         BoxShadow(
                           color: Color(0xFFF1F6FF),
@@ -73,7 +73,7 @@ class _DashboardState extends State<Dashboard> {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(14.r),
                         onTap: () {
-                          Get.updateLocale(Locale('bn', 'BD'));
+                          Get.updateLocale(const Locale('bn', 'BD'));
                         },
                         child: Container(
                           padding: EdgeInsets.all(8.r),
@@ -98,7 +98,7 @@ class _DashboardState extends State<Dashboard> {
             ),
             Text(
               'my_tasks'.tr,
-              style: TextStyle(
+              style: const TextStyle(
                 color: textColor,
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
@@ -118,9 +118,9 @@ class _DashboardState extends State<Dashboard> {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Color(0xFF7DC8E7).withOpacity(0.5),
+                              color: const Color(0xFF7DC8E7).withOpacity(0.5),
                               blurRadius: 15,
-                              offset: Offset(5, 6),
+                              offset: const Offset(5, 6),
                               spreadRadius: 0,
                             ),
                           ],
@@ -130,7 +130,7 @@ class _DashboardState extends State<Dashboard> {
                           borderRadius: BorderRadius.circular(14.r),
                           child: InkWell(
                             onTap: () {
-                              Get.updateLocale(Locale('en', 'US'));
+                              Get.updateLocale(const Locale('en', 'US'));
                             },
                             borderRadius: BorderRadius.circular(14.r),
                             child: ClipRRect(
@@ -138,7 +138,7 @@ class _DashboardState extends State<Dashboard> {
                               child: Container(
                                 width: double.infinity,
                                 padding: EdgeInsets.all(16.r),
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
                                       'assets/images/complete_back.png',
@@ -171,7 +171,7 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                     Text(
                                       'completed'.tr,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Color(0xFF11165D),
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
@@ -182,7 +182,7 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                     Text(
                                       '${digits(86)} ${'task'.tr}',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Color(0xFF11165D),
                                         fontSize: 14,
                                         fontWeight: FontWeight.w400,
@@ -202,9 +202,9 @@ class _DashboardState extends State<Dashboard> {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Color(0xFFE77D7D).withOpacity(0.5),
+                              color: const Color(0xFFE77D7D).withOpacity(0.5),
                               blurRadius: 15,
-                              offset: Offset(4, 4),
+                              offset: const Offset(4, 4),
                               spreadRadius: 0,
                             ),
                           ],
@@ -220,7 +220,7 @@ class _DashboardState extends State<Dashboard> {
                               child: Container(
                                 width: double.infinity,
                                 padding: EdgeInsets.all(16.r),
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
                                       'assets/images/canceled_back.png',
@@ -252,7 +252,7 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                     Text(
                                       'canceled'.tr,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
@@ -263,7 +263,7 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                     Text(
                                       '${digits(13)} ${'task'.tr}',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 14,
                                         fontWeight: FontWeight.w400,
@@ -289,9 +289,9 @@ class _DashboardState extends State<Dashboard> {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Color(0xFF7D88E7).withOpacity(0.5),
+                              color: const Color(0xFF7D88E7).withOpacity(0.5),
                               blurRadius: 15,
-                              offset: Offset(4, 4),
+                              offset: const Offset(4, 4),
                               spreadRadius: 0,
                             ),
                           ],
@@ -307,7 +307,7 @@ class _DashboardState extends State<Dashboard> {
                               child: Container(
                                 width: double.infinity,
                                 padding: EdgeInsets.all(16.r),
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
                                       'assets/images/pending_back.png',
@@ -339,7 +339,7 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                     Text(
                                       'pending'.tr,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
@@ -370,9 +370,9 @@ class _DashboardState extends State<Dashboard> {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Color(0xFF81E89E).withOpacity(0.5),
+                              color: const Color(0xFF81E89E).withOpacity(0.5),
                               blurRadius: 15,
-                              offset: Offset(5, 6),
+                              offset: const Offset(5, 6),
                               spreadRadius: 0,
                             ),
                           ],
@@ -388,7 +388,7 @@ class _DashboardState extends State<Dashboard> {
                               child: Container(
                                 width: double.infinity,
                                 padding: EdgeInsets.all(16.r),
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
                                       'assets/images/ongoing_back.png',
@@ -421,7 +421,7 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                     Text(
                                       'on_going'.tr,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Color(0xFF11165D),
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
@@ -432,7 +432,7 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                     Text(
                                       '${digits('0')} ${'task'.tr}',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Color(0xFF11165D),
                                         fontSize: 14,
                                         fontWeight: FontWeight.w400,
@@ -459,7 +459,7 @@ class _DashboardState extends State<Dashboard> {
               children: [
                 Text(
                   'today_task'.tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: textColor,
                     fontSize: 24,
                     fontWeight: FontWeight.w600,
@@ -469,7 +469,7 @@ class _DashboardState extends State<Dashboard> {
                   onPressed: () {},
                   child: Text(
                     'view_all'.tr,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Color(0xFF393F93),
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
@@ -479,24 +479,36 @@ class _DashboardState extends State<Dashboard> {
               ],
             ),
             SizedBox(
-              height: 12.h,
+              height: 10.h,
             ),
-            TaskCard(
-              tags: [
-                TaskTag.office,
-                TaskTag.home,
-                TaskTag.urgent
-              ],
-              title: 'Design Meeting',
-              time: '10:00 - 11:00',
-              status: TaskStatus.canceled,
-              inHome: true,
-              onFunction: () {
-                print('clicked tasked');
-              },
+            ListView.builder(
+              padding: EdgeInsets.zero,
+              itemCount: 4,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                primary:  false,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: TaskCard(
+                      tags: const [
+                        TaskTag.office,
+                        TaskTag.home,
+                        TaskTag.urgent
+                      ],
+                      title: 'Design Meeting ' + digits(index),
+                      time: '10:00 - 11:00',
+                      status: TaskStatus.values[index],
+                      inHome: true,
+                      onFunction: () {
+
+                      },
+                    ),
+                  );
+                },
             ),
             SizedBox(
-              height: 100.h,
+              height: 75.h,
             ),
           ],
         ),
