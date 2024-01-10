@@ -17,9 +17,9 @@ class Tasks extends StatefulWidget {
 
 class _TasksState extends State<Tasks> {
 
-  final TextEditingController _controller = TextEditingController();
+  final TextEditingController searchController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
-  
+
   final DateTime now = DateTime.now();
   String nowMonth = '';
   String nowYear = '';
@@ -39,13 +39,13 @@ class _TasksState extends State<Tasks> {
       nowYear = DateTime.now().year.toString();
 
       weeks = [
-        now.subtract(Duration(days: 3)),
-        now.subtract(Duration(days: 2)),
-        now.subtract(Duration(days: 1)),
+        now.subtract(const Duration(days: 3)),
+        now.subtract(const Duration(days: 2)),
+        now.subtract(const Duration(days: 1)),
         now,
-        now.add(Duration(days: 1)),
-        now.add(Duration(days: 2)),
-        now.add(Duration(days: 3)),
+        now.add(const Duration(days: 1)),
+        now.add(const Duration(days: 2)),
+        now.add(const Duration(days: 3)),
       ];
     });
   }
@@ -64,7 +64,7 @@ class _TasksState extends State<Tasks> {
             SearchField(
               mainContext: context,
               focusNode: _focusNode,
-              controller: _controller,
+              controller: searchController,
               onChanged: (value) {
                 setState(() {
                   print(value);
@@ -91,12 +91,12 @@ class _TasksState extends State<Tasks> {
                     SvgPicture.asset(
                       'assets/icons/calendar.svg',
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Text(
-                      nowMonth.tr + ' ' + digits(nowYear),
-                      style: TextStyle(
+                      '${nowMonth.tr} ${digits(nowYear)}',
+                      style: const TextStyle(
                         color: Color(0xFF525E77),
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
@@ -120,6 +120,7 @@ class _TasksState extends State<Tasks> {
                   itemBuilder: (context, index){
                     return Padding(
                       padding: EdgeInsets.symmetric(horizontal: 2.w),
+                      //TODO: add animation
                       child: Material(
                         color: index == selectedDate ? primaryColor : Colors.white,
                         borderRadius: BorderRadius.circular(12.r),
@@ -184,7 +185,7 @@ class _TasksState extends State<Tasks> {
                 ),
                 Text(
                   '${digits(9).padLeft(2,'0')} ${'h'.tr} ${digits(30)} ${'min'.tr}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 14,
                     fontWeight: FontWeight.w400,

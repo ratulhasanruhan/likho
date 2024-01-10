@@ -42,13 +42,13 @@ extension TaskStatusExtension on TaskStatus {
 
   static TaskStatus fromName(String name) {
     switch (name) {
-      case 'pending':
+      case 'Pending' || 'পেন্ডিং' :
         return TaskStatus.pending;
-      case 'on_going':
+      case 'On Going' || 'চলমান':
         return TaskStatus.onGoing;
-      case 'completed':
+      case 'Completed' || 'সম্পন্ন':
         return TaskStatus.completed;
-      case 'canceled':
+      case 'Canceled' || 'বাতিল':
         return TaskStatus.canceled;
       default:
         return TaskStatus.onGoing;

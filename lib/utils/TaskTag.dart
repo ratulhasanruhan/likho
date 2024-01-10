@@ -52,17 +52,17 @@ extension TaskTagExtension on TaskTag {
 
   static TaskTag fromName(String name) {
     switch (name) {
-      case 'office':
+      case 'Office' || 'অফিস':
         return TaskTag.office;
-      case 'home':
+      case 'Home' || 'বাড়ি':
         return TaskTag.home;
-      case 'personal':
+      case 'Personal' || 'ব্যক্তিগত':
         return TaskTag.personal;
-      case 'urgent':
+      case 'Urgent' || 'জরুরী':
         return TaskTag.urgent;
-      case 'work':
+      case 'Work' || 'কাজ':
         return TaskTag.work;
-      case 'other':
+      case 'Other' || 'অন্যান্য' :
         return TaskTag.other;
       default:
         return TaskTag.other;

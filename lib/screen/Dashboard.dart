@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:likho/utils/NumberIntl.dart';
 import 'package:likho/utils/colors.dart';
+import 'package:likho/utils/constants.dart';
 import 'package:likho/widget/TaskCard.dart';
-import '../utils/TaskStatus.dart';
-import '../utils/TaskTag.dart';
+
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -488,17 +489,15 @@ class _DashboardState extends State<Dashboard> {
                 physics: const NeverScrollableScrollPhysics(),
                 primary:  false,
                 itemBuilder: (context, index) {
+                final demoData = demoTask[index];
+
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: TaskCard(
-                      tags: const [
-                        TaskTag.office,
-                        TaskTag.home,
-                        TaskTag.urgent
-                      ],
-                      title: 'Design Meeting ' + digits(index),
-                      time: '10:00 - 11:00',
-                      status: TaskStatus.values[index],
+                      tags: demoData.tags,
+                      title: demoData.title + digits(index),
+                      time: DateFormat('hh:mm').format(demoData.timeRange.start) + ' - ' + DateFormat('hh:mm a').format(demoData.timeRange.end),
+                      status: demoData.status,
                       inHome: true,
                       onFunction: () {
 
