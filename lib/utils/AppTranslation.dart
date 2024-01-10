@@ -45,8 +45,34 @@ final Map<String, String> en = {
   'work' : 'Work',
   'other' : 'Other',
 
+  //month
+  'january' : 'January',
+  'february' : 'February',
+  'march' : 'March',
+  'april' : 'April',
+  'may' : 'May',
+  'june' : 'June',
+  'july' : 'July',
+  'august' : 'August',
+  'september' : 'September',
+  'october' : 'October',
+  'november' : 'November',
+  'december' : 'December',
+
+  //day
+  'mon' : 'MON',
+  'tue' : 'TUE',
+  'wed' : 'WED',
+  'thu' : 'THU',
+  'fri' : 'FRI',
+  'sat' : 'SAT',
+  'sun' : 'SUN',
+
   //task
   'search_for_task' : 'Search for task',
+  'today' : 'Today',
+  'h' : 'h',
+  'min' : 'min',
 
 };
 
@@ -90,7 +116,33 @@ final Map<String, String> bn = {
   'work' : 'কাজ',
   'other' : 'অন্যান্য',
 
+  //month
+  'january' : 'জানুয়ারী',
+  'february' : 'ফেব্রুয়ারি',
+  'march' : 'মার্চ',
+  'april' : 'এপ্রিল',
+  'may' : 'মে',
+  'june' : 'জুন',
+  'july' : 'জুলাই',
+  'august' : 'আগস্ট',
+  'september' : 'সেপ্টেম্বর',
+  'october' : 'অক্টোবর',
+  'november' : 'নভেম্বর',
+  'december' : 'ডিসেম্বর',
+
+  //day
+  'mon' : 'সোম',
+  'tue' : 'মঙ্গল',
+  'wed' : 'বুধ',
+  'thu' : 'বৃহঃ',
+  'fri' : 'শুক্র',
+  'sat' : 'শনি',
+  'sun' : 'রবি',
+
   //task
   'search_for_task' : 'টাস্ক খুজুন',
+  'today' : 'আজ',
+  'h' : 'ঘন্টা',
+  'min' : 'মিনিট',
 
 };
