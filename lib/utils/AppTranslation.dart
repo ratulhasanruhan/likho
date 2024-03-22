@@ -74,6 +74,20 @@ final Map<String, String> en = {
   'h' : 'h',
   'min' : 'min',
 
+  //add task
+  'add_task' : 'Add Task',
+  'title' : 'Title',
+  'task_name' : 'Task Name',
+  'date' : 'Date',
+  'cancel' : 'Cancel',
+  'confirm' : 'Confirm',
+  'time' : 'Time',
+  'start' : 'Start',
+  'end' : 'End',
+  'description' : 'Description',
+  'task_details' : 'Task Details',
+  'tags' : 'Tags',
+
 };
 
 final Map<String, String> bn = {
@@ -144,5 +158,19 @@ final Map<String, String> bn = {
   'today' : 'আজ',
   'h' : 'ঘন্টা',
   'min' : 'মিনিট',
+
+  //add task
+  'add_task' : 'টাস্ক যোগ',
+  'title' : 'টাইটেল',
+  'task_name' : 'টাস্ক নাম',
+  'date' : 'তারিখ',
+  'cancel' : 'বাতিল',
+  'confirm' : 'কনফার্ম',
+  'time' : 'সময়',
+  'start' : 'শুরু',
+  'end' : 'শেষ',
+  'description' : 'বিবরণ',
+  'task_details' : 'টাস্ক বিবরণ',
+  'tags' : 'ট্যাগ',
 
 };

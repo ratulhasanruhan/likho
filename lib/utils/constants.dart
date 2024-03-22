@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:likho/utils/TaskStatus.dart';
 import 'package:likho/utils/TaskTag.dart';
-
 import '../model/TaskModel.dart';
+
+const geminiApiKey = "AIzaSyAT7VnyOn9yB_S7thvtpzePxVSyErpfvMQ";
+
 
 List<TaskModel> demoTask = [
   TaskModel(

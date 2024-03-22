@@ -1,17 +1,23 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:likho/controller/RoutesController.dart';
+import 'package:likho/screen/AddTask.dart';
 import 'package:likho/screen/Dashboard.dart';
 import 'package:likho/screen/Tasks.dart';
 import 'package:likho/utils/AppTranslation.dart';
 import 'package:likho/utils/colors.dart';
+import 'package:likho/utils/constants.dart';
 
 import 'controller/NavBarController.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Gemini.init(apiKey: geminiApiKey);
+
   runApp( MyApp());
 }
 
@@ -33,7 +39,19 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(
                 seedColor: primaryColor,
                 primary: primaryColor,
+                background: Colors.white,
                 brightness: Brightness.light,
+            ),
+            useMaterial3: true,
+            fontFamily: Get.locale == const Locale('en', 'US')
+                ? 'HindSiliguri'
+                : 'Ador',
+          ),
+          darkTheme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: darkPrimaryColor,
+              primary: darkPrimaryColor,
+              brightness: Brightness.dark,
             ),
             useMaterial3: true,
             fontFamily: Get.locale == const Locale('en', 'US')
@@ -68,8 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Dashboard(),
               Tasks(),
-              Container(
-                color: Colors.green,
+              AddTask(
+                fromMain: true,
               ),
               Container(
                 color: Colors.yellow,

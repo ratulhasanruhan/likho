@@ -4,8 +4,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:likho/utils/colors.dart';
 import 'package:likho/widget/BigButton.dart';
-import 'package:logger/logger.dart';
-
 import 'Login.dart';
 
 class Splash extends StatelessWidget {

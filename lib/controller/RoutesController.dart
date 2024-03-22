@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:likho/main.dart';
+import 'package:likho/screen/AddTask.dart';
 import 'package:likho/screen/Dashboard.dart';
 import 'package:likho/screen/Login.dart';
 import 'package:likho/screen/Signup.dart';
@@ -40,6 +41,12 @@ appRoutes() => [
   GetPage(
     name: '/tasks',
     page: () => Tasks(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+  ),
+  GetPage(
+    name: '/add',
+    page: () => AddTask(),
     middlewares: [MyMiddelware()],
     transition: Transition.cupertino,
   ),
